@@ -1,10 +1,10 @@
 totafsdfsf TEST fdsfsdf
-totafsdtest2 fdsfsdf fdfjs
-jfldjfldk # wynik
-fjdfsfds # k alal
-djfjkldsjf test5 jjjjjj fsfjdljfdlsj flj ldfj
-gjjkdsljflds test6 jdlkfjdslf
-fjdslkfjdl test7 tttttt
-fjdlsjfkl test8 oooolll
-rwrewrew test9 fjdslkjfdl
-fjdlskjfldjflj test10 rewrewrew
+totafsdTEST2 AA#kAA fdfjs
+jfldjfldk TE wynik
+jfldjfldk #.02K wynik
+#
+gjjkdsljflds #,3k jdlkfjdslf
+T
+fjdlsjfkl TEST8 oooolll
+rwrewrew TEstING9 fjdslkjfdl
+fjdlskjfldjflj #1000k rewrewrew
