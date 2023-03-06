@@ -12,13 +12,9 @@ gjjkdsljflds #,3k jdlkfjdslf
 test6
 #.00001k
 test7
-fjdlsjfkl #.07k fivee
+fjdlsjfkl #.10000k oooolll
 test8
 rwrewrew #k fjdslkjfdl
 teSTing9
 fjdlskjfldjflj #1000k rewrewrew
 test10
----#.0k---
-TeST11
-#..
-test12

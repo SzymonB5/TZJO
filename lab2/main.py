@@ -35,10 +35,8 @@ def my_printf(format_string,param):
         print(endFormat)
     else:
     	print(startFormat, end="")
-    	for i in range(0, number - len(param)):
-    		print(" ", end="")
-    	
-    	print(param.swapcase(), end="")
+    	for i in range(0, min(len(param), number)):
+        	print(param[i].swapcase(), end="")
     	print(endFormat)
 
 data=sys.stdin.readlines()
@@ -46,3 +44,9 @@ data=sys.stdin.readlines()
 for i in range(0,len(data),2):
    my_printf(data[i].rstrip(),data[i+1].rstrip())
   
+# my_printf("test", "ignore")
+# my_printf("AA#kAA", "ignORe")
+# my_printf("A#.0kA", "ignore")
+# my_printf("--#.100K", "ignore")
+# my_printf("#100k", "ignore")
+
