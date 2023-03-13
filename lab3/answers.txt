@@ -1,10 +1,10 @@
-totafsdfsf test fdsfsdf
-totafsdtest2 fdsfsdf fdfjs
-jfldjfldk # wynik
-fjdfsfds # k alal
-djfjkldsjf test5 jjjjjj fsfjdljfdlsj flj ldfj
-gjjkdsljflds test6 jdlkfjdslf
-fjdslkfjdl test7 tttttt
-fjdlsjfkl test8 oooolll
-rwrewrew test9 fjdslkjfdl
-fjdlskjfldjflj test10 rewrewrew
+totafsdfsf TESTfdsfsdf
+totafsd TEST2 fdsfsdf fdfjs
+jfldjfldk      TEST3 wynik
+fjdfsfds # 10k alal
+#
+---     TEST6---
+fjdslkfjdl #-k tttttt
+---#####TEST8-----
+rwrewrew TEST9 fjdslkjfdl
+---#.1---
