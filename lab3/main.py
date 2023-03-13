@@ -59,6 +59,7 @@ def my_printf(format_string,param):
     	print(endFormat)
 
 data=sys.stdin.readlines()
-# print(separateStr("test#5ktest", "Test"))
+
 for i in range(0,len(data), 2):
     my_printf(data[i].rstrip(),data[i+1].rstrip())
+    
