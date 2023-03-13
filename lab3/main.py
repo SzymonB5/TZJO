@@ -45,7 +45,7 @@ def my_printf(format_string,param):
         print(endFormat)
     elif typeOf == 2:
     	print(startFormat, end="")
-    	for i in range(0, (len(param), number)):
+    	for i in range(0, min(len(param), number)):
         	print(param[i].swapcase(), end="")
     	print(endFormat)
     else:
