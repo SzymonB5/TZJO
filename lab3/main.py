@@ -7,6 +7,7 @@ def separateStr(format_string, param):
         if format_string[i] == '#':
             if format_string[i + 1] == 'k': 
                 return 1, format_string[0:i], -1, format_string[i + 2:len(format_string)]
+                
             if format_string[i + 1] == '.':
             	if format_string[i + 2].isnumeric() == False:
             	    continue
@@ -20,6 +21,7 @@ def separateStr(format_string, param):
             	    if format_string[save] != 'k':
             	        continue
             	    return 2, format_string[0:i], int(format_string[i + 2:save]), format_string[save + 1:len(format_string)]
+            	    
             if format_string[i + 1].isnumeric():
                 save = 0
                 for j in range(i + 2, len(format_string)):
@@ -34,7 +36,7 @@ def separateStr(format_string, param):
        
     return 0, format_string, -1, -1    
 
-def my_printf(format_string,param):
+def my_printf(format_string, param):
     #print(format_string)
     typeOf, startFormat, number, endFormat = separateStr(format_string, param)
     if typeOf == 0:
