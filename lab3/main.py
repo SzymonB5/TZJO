@@ -19,7 +19,18 @@ def separateStr(format_string, param):
             	            
             	    if format_string[save] != 'k':
             	        continue
-            	    return 2, format_string[0:i], int(format_string[i + 2:save]), format_string[save + 1:len(format_string)]        
+            	    return 2, format_string[0:i], int(format_string[i + 2:save]), format_string[save + 1:len(format_string)]
+            if format_string[i + 1].isnumeric():
+                save = 0
+                for j in range(i + 2, len(format_string)):
+            	        if format_string[j].isnumeric() == False:
+            	            save = j
+            	            break
+            	            
+                if format_string[save] != 'k':
+                    continue
+            
+                return 3, format_string[0:i], int(format_string[i + 2:save]), format_string[save + 1:len(format_string)]
        
     return 0, format_string, -1, -1    
 
