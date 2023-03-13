@@ -30,7 +30,7 @@ def separateStr(format_string, param):
                 if format_string[save] != 'k':
                     continue
             
-                return 3, format_string[0:i], int(format_string[i + 2:save]), format_string[save + 1:len(format_string)]
+                return 3, format_string[0:i], int(format_string[i + 1:save]), format_string[save + 1:len(format_string)]
        
     return 0, format_string, -1, -1    
 
@@ -43,14 +43,22 @@ def my_printf(format_string,param):
         print(startFormat, end="")
         print(param.swapcase(), end="")
         print(endFormat)
-    else:
+    elif typeOf == 2:
     	print(startFormat, end="")
-    	for i in range(0, min(len(param), number)):
+    	for i in range(0, (len(param), number)):
         	print(param[i].swapcase(), end="")
     	print(endFormat)
-
+    else:
+    	print(startFormat, end="")
+    	for i in range(0, number - len(param)):
+    		print(" ", end="")
+    	
+    	for i in range(0, (len(param))):
+        	print(param[i].swapcase(), end="")
+        	
+    	print(endFormat)
 
 data=sys.stdin.readlines()
-
-for i in range(0,len(data),2):
+# print(separateStr("test#5ktest", "Test"))
+for i in range(0,len(data), 2):
     my_printf(data[i].rstrip(),data[i+1].rstrip())
