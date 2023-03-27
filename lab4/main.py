@@ -30,27 +30,15 @@ def my_printf(format_string, param):
         print(startFormat, end="")
         print(param.swapcase(), end="")
         print(endFormat)
-    elif typeOf == 2:
-    	print(startFormat, end="")
-    	for i in range(0, min(len(param), number)):
-        	print(param[i].swapcase(), end="")
-    	print(endFormat)
-    elif typeOf == 3:
-    	print(startFormat, end="")
-    	for i in range(0, number - len(param)):
-    		print(" ", end="")
-    	
-    	for i in range(0, (len(param))):
-        	print(param[i].swapcase(), end="")
-        	
-    	print(endFormat)
-    else:
+    elif typeOf == 4:
         print(startFormat, end="")
         print(printWithoutZero(str(param)[::-1]), end="")
         print(endFormat)
 
 data=sys.stdin.readlines()
 
+# print(printWithoutZero(my_printf("---#g---", 213700)))
+# print(printWithoutZero("002"))
 for i in range(0,len(data), 2):
     my_printf(data[i].rstrip(),data[i+1].rstrip())
     
