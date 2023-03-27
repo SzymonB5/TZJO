@@ -34,7 +34,7 @@ def separateStr(format_string, param):
             
                 return 3, format_string[0:i], int(format_string[i + 1:save]), format_string[save + 1:len(format_string)]
             if format_string[i + 1] == 'g':
-            	return 4, format_string[0:i], str(format_string[i+1:i+2])[::-1], format_string[i+2:len(format_string)]
+            	return 4, format_string[0:i], str(param)[::-1], format_string[i+2:len(format_string)]
        
     return 0, format_string, -1, -1    
 
@@ -68,7 +68,7 @@ def my_printf(format_string, param):
 
 # data=sys.stdin.readlines()
 
-print(separateStr("---#g---", 2137))
+print(separateStr("---#g---", 213700))
 
 # for i in range(0,len(data), 2):
   # my_printf(data[i].rstrip(),data[i+1].rstrip())
