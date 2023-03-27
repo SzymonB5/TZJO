@@ -26,11 +26,7 @@ def my_printf(format_string, param):
     typeOf, startFormat, number, endFormat = separateStr(format_string, param)
     if typeOf == 0:
     	print(format_string)
-    elif typeOf == 1:
-        print(startFormat, end="")
-        print(param.swapcase(), end="")
-        print(endFormat)
-    elif typeOf == 4:
+    else:
         print(startFormat, end="")
         print(printWithoutZero(str(param)[::-1]), end="")
         print(endFormat)
