@@ -2,6 +2,17 @@
 
 import sys
 
+def printWithoutZero(numb):
+    if int(numb) == 0:
+        return 0
+        
+        
+    fr = 0
+    while numb[fr] == '0':
+        fr += 1
+        
+    return numb[fr:len(numb)]
+
 def separateStr(format_string, param):
     for i in range(0, len(format_string) - 1):
         if format_string[i] == '#':
@@ -63,13 +74,13 @@ def my_printf(format_string, param):
     	print(endFormat)
     else:
         print(startFormat, end="")
-        print(param, end="")
+        print(printWithoutZero(param), end="")
         print(endFormat)
 
 # data=sys.stdin.readlines()
 
 print(separateStr("---#g---", 213700))
-
+print(printWithoutZero("002"))
 # for i in range(0,len(data), 2):
   # my_printf(data[i].rstrip(),data[i+1].rstrip())
     
