@@ -56,9 +56,6 @@ def my_printf(format_string, param):
         
         print(endFormat)
 
-# print(separateStr("-#5g-", 222))
-
-
 data=sys.stdin.readlines()
 
 for i in range(0,len(data), 2):
