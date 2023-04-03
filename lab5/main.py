@@ -23,15 +23,24 @@ def transform_number(num):
     return new_str
 
 
-
-
 def separateStr(format_string, param):
     for i in range(0, len(format_string) - 1):
         if format_string[i] == '#':
-            if format_string[i + 1] == 'g':
-            	return 4, format_string[0:i], transform_number(param), format_string[i+2:len(format_string)]
+            
+            if format_string[i + 1].isnumeric():
+                save = 0
+                for j in range(i + 2, len(format_string)):
+            	        if format_string[j].isnumeric() == False:
+            	            save = j
+            	            break
+            	            
+                if format_string[save] != 'g':
+                    continue
+            
+                return 3, format_string[0:i], int(format_string[i + 1:save]), format_string[save + 1:len(format_string)]
        
-    return 0, format_string, -1, -1    
+    return 0, format_string, -1, -1
+    
 
 def my_printf(format_string, param):
     typeOf, startFormat, number, endFormat = separateStr(format_string, param)
@@ -39,8 +48,16 @@ def my_printf(format_string, param):
     	print(format_string)
     else:
         print(startFormat, end="")
-        print(number, end="")
+        
+        for i in range(0, number - len(param)):
+            print(" ", end="")
+        
+        print(transform_number(param), end="")
+        
         print(endFormat)
+
+# print(separateStr("-#5g-", 222))
+
 
 data=sys.stdin.readlines()
 
