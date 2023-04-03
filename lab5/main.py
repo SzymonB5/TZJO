@@ -45,9 +45,6 @@ def my_printf(format_string, param):
 
 data=sys.stdin.readlines()
 
-# my_printf("---#g---", 1234)
-# my_printf("---#g---", 10101)
-
 for i in range(0,len(data), 2):
     my_printf(data[i].rstrip(),data[i+1].rstrip())
     
