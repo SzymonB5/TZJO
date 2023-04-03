@@ -40,14 +40,14 @@ def my_printf(format_string, param):
     	print(format_string)
     else:
         print(startFormat, end="")
-        print(printWithoutZero(str(param)[::-1]), end="")
+        print(number, end="")
         print(endFormat)
 
-# data=sys.stdin.readlines()
+data=sys.stdin.readlines()
 
-print(transform_number(1234))
-print(transform_number(10101))
+# my_printf("---#g---", 1234)
+# my_printf("---#g---", 10101)
 
-# for i in range(0,len(data), 2):
-  #   my_printf(data[i].rstrip(),data[i+1].rstrip())
+for i in range(0,len(data), 2):
+    my_printf(data[i].rstrip(),data[i+1].rstrip())
     
