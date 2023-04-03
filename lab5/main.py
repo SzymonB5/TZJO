@@ -2,17 +2,6 @@
 
 import sys
 
-def printWithoutZero(numb):
-    n = str(numb)
-    if int(n) == 0:
-        return 0       
-        
-    fr = 0
-    while n[fr] == '0':
-        fr += 1
-        
-    return n[fr:len(n)]
-
 def separateStr(format_string, param):
     for i in range(0, len(format_string) - 1):
         if format_string[i] == '#':
