@@ -34,7 +34,6 @@ def separateStr(format_string, param):
     return 0, format_string, -1, -1    
 
 def my_printf(format_string, param):
-    #print(format_string)
     typeOf, startFormat, number, endFormat = separateStr(format_string, param)
     if typeOf == 0:
     	print(format_string)
