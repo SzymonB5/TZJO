@@ -22,7 +22,7 @@ def separateStr(format_string, param):
                             save = j
                             break
 
-                    if format_string[save] != 'd':
+                    if format_string[save] != 'g':
                         continue
                     return 1, format_string[0:i], int(format_string[i + 2: save]), \
                         format_string[save + 1:len(format_string)]
