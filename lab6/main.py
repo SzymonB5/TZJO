@@ -38,8 +38,18 @@ def my_printf(format_string, param):
         print(startFormat, end="")
         for i in range(int(number) - len(str(param))):
             print("0", end="")
-        for j in str(param):
-            print(alterTo(int(j)), end="")
+
+        if param == '1':
+            print("0", end="")
+        else:
+            rem0 = 1
+            for j in str(param):
+                x = alterTo(int(j))
+                if x == 0 and rem0 == 1:
+                    pass
+                elif x != 0:
+                    rem0 = 0
+                    print(x, end="")
 
         print(endFormat)
 
