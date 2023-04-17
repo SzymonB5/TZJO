@@ -27,7 +27,7 @@ def separateStr(format_string):
                     return 1, format_string[0:i], int(format_string[i + 2: save]), \
                         format_string[save + 1:len(format_string)]
 
-    return 0, format_string, -1, -1
+    return 0, format_string, "", ""
 
 
 def my_printf(format_string, param):
