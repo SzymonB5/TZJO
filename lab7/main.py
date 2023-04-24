@@ -23,8 +23,7 @@ def my_printf(format_string, param):
     if typeOf == 0:
         print(format_string)
     else:
-        print(startFormat, end="")
-        print("0x", end="")
+        print(startFormat + "0x", end="")
         for j in str(param)[2:]:
             print(alterTo(j), end="")
 
