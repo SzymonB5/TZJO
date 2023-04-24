@@ -9,7 +9,7 @@ def alterTo(numb):
     return chr(ord(numb) + 6)
 
 
-def separateStr(format_string, param):
+def separateStr(format_string):
     for i in range(0, len(format_string) - 1):
         if format_string[i] == '#':
             if format_string[i + 1] == 'j':
@@ -19,7 +19,7 @@ def separateStr(format_string, param):
 
 
 def my_printf(format_string, param):
-    typeOf, startFormat, number, endFormat = separateStr(format_string, param)
+    typeOf, startFormat, number, endFormat = separateStr(format_string)
     if typeOf == 0:
         print(format_string)
     else:
