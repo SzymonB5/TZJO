@@ -4,7 +4,9 @@ import sys
 
 
 def alterTo(numb):
-    return (numb * 9 + 1) % 10
+    if numb.isnumeric():
+        return numb
+    return chr(ord(numb) + 6)
 
 
 def separateStr(format_string, param):
@@ -40,7 +42,7 @@ def my_printf(format_string, param):
         for i in range(int(number) - len(str(param))):
             print("0", end="")
         for j in str(param):
-            print(alterTo(int(j)), end="")
+            print(alterTo(j), end="")
 
         print(endFormat)
 
