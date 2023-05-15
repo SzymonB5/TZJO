@@ -41,11 +41,15 @@ def my_printf(format_string, param):
         print(startFormat, end="")
         for i in range(int(number) - len(str(param))):
             print("0", end="")
-        for j in str(param):
+        par = hex(param)
+        par = str(par)
+        par = par[2:]
+        for j in par:
             print(alterTo(j), end="")
 
         print(endFormat)
 
+# my_printf("#.9j", 0x123456)
 data = sys.stdin.readlines()
 
 for i in range(0, len(data), 2):
