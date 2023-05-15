@@ -1,20 +1,14 @@
-totafsdfsf #.9j fdsfsdf
+---#.9j---
 0x123456
-totafsd#k fdsfsdf fdfjs
-test2
-jfldjfldk # wynik
-test3
-fjdfsfds # k alal
-test4
-djfjkldsjf #k jjjjjj fsfjdljfdlsj flj ldfj
-test5
-gjjkdsljflds #k jdlkfjdslf
-test6
-fjdslkfjdl #k tttttt
-test7
-fjdlsjfkl #k oooolll
-test8
-rwrewrew #k fjdslkjfdl
-test9
-fjdlskjfldjflj #k rewrewrew
-test10
+---#.9j
+0x123456
+#.9j---
+0x123456
+#.9j
+0x123456
+#.1j
+0xABCDEF
+#.1j
+0x000000
+#.6j
+0x0ABCDE
