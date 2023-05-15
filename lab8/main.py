@@ -42,7 +42,7 @@ def my_printf(format_string, param):
     else:
         print(startFormat, end="")
         for i in range(int(number) - len(str(param)) + 2):
-            print("0", end="")
+            print("o", end="")
         # par = hex(param)
         par = str(param)
         par = par[2:]
