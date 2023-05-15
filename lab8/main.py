@@ -5,6 +5,8 @@ import sys
 
 def alterTo(numb):
     if numb.isnumeric():
+        if numb == '0':
+            return 'o'
         return numb
     return chr(ord(numb) + 6)
 
@@ -39,10 +41,10 @@ def my_printf(format_string, param):
         print(format_string)
     else:
         print(startFormat, end="")
-        for i in range(int(number) - len(str(param))):
+        for i in range(int(number) - len(str(param)) + 2):
             print("0", end="")
-        par = hex(param)
-        par = str(par)
+        # par = hex(param)
+        par = str(param)
         par = par[2:]
         for j in par:
             print(alterTo(j), end="")
