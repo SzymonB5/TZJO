@@ -8,3 +8,6 @@ oGHIJK
 0oGHIJK
 00oGHIJK
 00JKGJHK
+#.1J
+#1j
+#j
