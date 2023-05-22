@@ -65,14 +65,8 @@ def my_printf(format_string, param):
 
         print(endFormat)
 
+data = sys.stdin.readlines()
 
-if __name__ == '__main__':
-    my_printf("---#.2h---", 12.129)
-    my_printf("---#.6h---", 12.129)
-    my_printf("---#.1h---", 12.129)
+for i in range(0, len(data), 2):
+    my_printf(data[i].rstrip(), data[i + 1].rstrip())
 
-# data = sys.stdin.readlines()
-#
-# for i in range(0, len(data), 2):
-#     my_printf(data[i].rstrip(), data[i + 1].rstrip())
-#
