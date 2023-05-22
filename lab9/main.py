@@ -26,9 +26,13 @@ def separateStr(format_string, param):
     return 0, format_string, -1, -1
 
 def separateFloat(param):
-    for i in range(param):
-        if param[i] == '.':
-            return param[0:i], param[i + 1:len(param)]
+    ctr = 0
+    for i in param:
+        if i == '.':
+            return param[0:ctr], param[ctr + 1:len(param)]
+        ctr += 1
+
+    return 1, 1
 
 def my_printf(format_string, param):
     # print(format_string)
@@ -36,9 +40,12 @@ def my_printf(format_string, param):
     if typeOf == 0:
         print(format_string)
     else:
+        string = str(param)
+        floatOne, floatTwo = separateFloat(string)
+
         print(startFormat, end="")
-        for i in range(0, min(len(param), number)):
-            print(param[i].swapcase(), end="")
+
+
         print(endFormat)
 
 
