@@ -48,10 +48,8 @@ def my_printf(format_string, param):
     if typeOf == 0:
         print(format_string)
     else:
-        digitsToPrint = int(number)
-        param1 = round(param, number)
-        string = str(param1)
-        floatOne, floatTwo = separateFloat(string)
+        floatOne, floatTwo = separateFloat(str(round(param, number)))
+
         print(startFormat, end="")
 
         for i in floatOne:
@@ -71,7 +69,7 @@ def my_printf(format_string, param):
 if __name__ == '__main__':
     my_printf("---#.2h---", 12.129)
     my_printf("---#.6h---", 12.129)
-    my_printf("---#.2h---", 12.129)
+    my_printf("---#.1h---", 12.129)
 
 # data = sys.stdin.readlines()
 #
