@@ -3,11 +3,13 @@
 import sys
 
 def alterFloat1(number):
-    if 0 <= number <= 9:
-        return chr(ord('a') + number)
+    n = int(number)
+    if 0 <= n <= 9:
+        return chr(ord('a') + n)
 
 def alterFloat2(number):
-    return (number + 5) % 10
+    n = int(number)
+    return chr(ord('0') + (n + 5) % 10)
 
 def separateStr(format_string, param):
     for i in range(0, len(format_string) - 1):
@@ -46,22 +48,29 @@ def my_printf(format_string, param):
     if typeOf == 0:
         print(format_string)
     else:
-        string = str(param)
+        digitsToPrint = int(number)
+        param1 = round(param, number)
+        string = str(param1)
         floatOne, floatTwo = separateFloat(string)
         print(startFormat, end="")
 
         for i in floatOne:
-            print(alterFloat1(floatOne), end="")
+            print(alterFloat1(i), end="")
         print('.', end="")
 
+
+
         for i in floatTwo:
-            print(alterFloat2(floatTwo), end="")
+            print(alterFloat2(i), end="")
+
+        for i in range(digitsToPrint - number):
+            print("0", end="")
 
         print(endFormat)
 
 
 if __name__ == '__main__':
-    my_printf("---#.3h---", 1.123456)
+    my_printf("---#.2h---", 12.129)
 
 # data = sys.stdin.readlines()
 #
