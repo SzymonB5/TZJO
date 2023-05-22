@@ -58,18 +58,19 @@ def my_printf(format_string, param):
             print(alterFloat1(i), end="")
         print('.', end="")
 
-
-
         for i in floatTwo:
             print(alterFloat2(i), end="")
 
-        for i in range(digitsToPrint - number):
+        number -= 1
+        for i in range(number - len(floatOne)):
             print("0", end="")
 
         print(endFormat)
 
 
 if __name__ == '__main__':
+    my_printf("---#.2h---", 12.129)
+    my_printf("---#.6h---", 12.129)
     my_printf("---#.2h---", 12.129)
 
 # data = sys.stdin.readlines()
