@@ -2,9 +2,12 @@
 
 import sys
 
-def alterFloat(number):
+def alterFloat1(number):
     if 0 <= number <= 9:
         return chr(ord('a') + number)
+
+def alterFloat2(number):
+    return (number + 5) % 10
 
 def separateStr(format_string, param):
     for i in range(0, len(format_string) - 1):
@@ -47,6 +50,12 @@ def my_printf(format_string, param):
         floatOne, floatTwo = separateFloat(string)
         print(startFormat, end="")
 
+        for i in floatOne:
+            print(alterFloat1(floatOne), end="")
+        print('.', end="")
+
+        for i in floatTwo:
+            print(alterFloat2(floatTwo), end="")
 
         print(endFormat)
 
