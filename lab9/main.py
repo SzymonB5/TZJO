@@ -2,6 +2,9 @@
 
 import sys
 
+def alterFloat(number):
+    if 0 <= number <= 9:
+        return chr(ord('a') + number)
 
 def separateStr(format_string, param):
     for i in range(0, len(format_string) - 1):
@@ -42,7 +45,6 @@ def my_printf(format_string, param):
     else:
         string = str(param)
         floatOne, floatTwo = separateFloat(string)
-
         print(startFormat, end="")
 
 
