@@ -13,11 +13,11 @@ def alterNumber(number):
 
 
 def my_printf(format_string, param):
+    replace = '#a'
+
     if '#a' not in format_string:
         print(format_string)
         return
-
-    replace = '#a'
 
     try:
         param = int(param)
