@@ -17,16 +17,11 @@ def count_digits(number):
     return count
 
 
-def toHex(number):
-    return hex(number)
-
-
 def alter_param(number):
     N = count_digits(number)
     F = int((number * 2) / N)
-    print(f'F={F}')
     if F % 2:
-        toHex(F)
+        F = str(hex(F)).replace('0x', '')
 
     return F
 
@@ -45,7 +40,7 @@ def my_printf(format_string, param):
     print("")
 
 
-for i in range(0, 5000, 1):
+for i in range(10000, 50000, 1):
     my_printf("#a", i)
 
 # data = sys.stdin.readlines()
