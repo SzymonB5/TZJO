@@ -3,41 +3,30 @@
 import sys
 
 
-def count_digits(number):
-    if number == 0:
-        return 1
+def alterNumber(number):
+    N = len(str(abs(number)))
+    ret = int((number * 2) / N)
+    if ret % 2 != 0:
+        return str(hex(ret)).replace('0x', '')
 
-    count = 0
-    number = abs(number)
-
-    while number > 0:
-        number //= 10
-        count += 1
-
-    return count
-
-
-def alter_param(number):
-    N = count_digits(number)
-    F = int((number * 2) / N)
-    if F % 2:
-        F = str(hex(F)).replace('0x', '')
-
-    return F
+    return str(ret)
 
 
 def my_printf(format_string, param):
-    shouldDo = True
-    for idx in range(0, len(format_string) - 1):
-        if shouldDo:
-            if format_string[idx] == '#' and format_string[idx + 1] == 'a':
-                print(alter_param(param), end="")
-                shouldDo = False
-            else:
-                print(format_string[idx], end="")
-        else:
-            shouldDo = True
-    print("")
+    if '#a' not in format_string:
+        print(format_string)
+        return
+
+    replace = '#a'
+
+    try:
+        param = int(param)
+    except Exception:
+        param = 0
+
+    replace_with = alterNumber(param)
+
+    print(format_string.replace(replace, replace_with))
 
 
 data = sys.stdin.readlines()
