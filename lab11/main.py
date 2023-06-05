@@ -6,8 +6,6 @@ helpString = "abcdefghij"
 
 
 def set_char_at_index(string, index, char):
-    if index < 0 or index >= len(string):
-        raise IndexError("Index out of range")
     return string[:index] + char + string[index + 1:]
 
 
@@ -43,7 +41,7 @@ def my_printf(format_string, param):
 
 
 if __name__ == '__main__':
-    my_printf("--#b==", 123)
+    my_printf("--#b==", 123123123)
 
 data = sys.stdin.readlines()
 
