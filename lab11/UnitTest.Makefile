@@ -93,3 +93,4 @@ merge:
 	$(call merge_test,short)
 	$(call merge_test,long)
 	$(call merge_test,bad)
+	$(call merge_test,custom)
