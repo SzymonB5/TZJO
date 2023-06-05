@@ -40,9 +40,6 @@ def my_printf(format_string, param):
         print(endFormat)
 
 
-if __name__ == '__main__':
-    my_printf("--#b==", 123123123)
-
 data = sys.stdin.readlines()
 
 for i in range(0, len(data), 2):
